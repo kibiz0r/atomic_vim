@@ -118,10 +118,11 @@ endif
 " customize stuff
 
 " folders that should be ignored
-let g:vim_ignore = ["log", "tools", "vendor", "build"]
+let g:vim_ignore = ["log", "vendor", "build"]
 
 " extensions that should be included in tag files
 let g:taggable_extensions = [
+                              \ 'as',
                               \ 'c',
                               \ 'coffee',
                               \ 'cs',
@@ -166,3 +167,10 @@ endif
 " clojure configuration
 let clj_highlight_builtins = 1
 let clj_paren_rainbow = 1
+
+" actionscript tab settings
+autocmd FileType actionscript
+  \ setlocal shiftwidth=4 |
+  \ setlocal tabstop=4 |
+  \ setlocal noexpandtab
+
